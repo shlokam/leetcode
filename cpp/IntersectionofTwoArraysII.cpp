@@ -1,7 +1,44 @@
+// Source : https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
+// Auhtor : Shloka Mahesheka
+// Date   : 25-12-2022
+
+/***********************************************************************************
+
+Given two arrays nums1 and  nums2. 
+Find the numbers which intersect them.
+
+Each element in the result must appear as many times as it shows in both arrays.
+
+For example: 
+nums1 = [1,2,2,1,5]
+nums2 = [2,2,1,3]
+
+Answer = [2,2,1]
+
+***********************************************************************************/
 #include<iostream>
 #include<vector>
 #include<map>
 using namespace std;
+
+/***********************************************************************************
+
+To find out the common elements between both the arrays , we store them in two 
+different map.
+The key of the hashmap will be the array element and the value will be the number
+of occurance.
+
+Then we traverse the first map and check if the second map contains that element.
+We check this by seeing if second map's value of the key is greater than 1.
+( This means that if a map contains an element it's value should be more than 1)
+
+If we find it true, then we store the minimim value of both's map's value 
+in a variable.
+
+Then we traverse the stored variable and add the key to our result array.
+
+***********************************************************************************/
+
 
 vector<int> intersectionOfTwoArray(vector<int> nums1,vector<int> nums2){
         vector<int> result;
