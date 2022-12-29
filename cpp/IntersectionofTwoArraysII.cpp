@@ -64,7 +64,6 @@ vector<int> intersectionOfTwoArray(vector<int> nums1,vector<int> nums2){
         }
 
         return result;
-
 }
 
 void print(vector<int> num){
@@ -84,6 +83,4 @@ int main(){
      vector<int> result = intersectionOfTwoArray(num1 , num2); 
 
      print(result);
-
-
 }
